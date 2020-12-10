@@ -11,9 +11,9 @@
 
   <div id="root">
     <div class="things">
-      <div v-for="thing in things" class="">
-        {{ thing }}
-        <span @click="funzioneElimina">X</span>
+      <div v-for="thing, index in things" class="">
+        {{ thing }} {{ index }}
+        <span @click="funzioneElimina(index)">X</span>
       </div>
     </div>
     <input type="text" name="" value="" v-model="message">

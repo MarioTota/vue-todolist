@@ -15,15 +15,12 @@ var app = new Vue({
         if(this.message == "") {
           window.alert("Devi compilare tutti i campi");
         } else {
-        this.things.push(this.message);
-        this.message = "";
+          this.things.push(this.message);
+          this.message = "";
         }
       },
-      funzioneElimina: function () {
-        // for (var i = 0; i < this.things.length; i++) {
-        //   message = this.things[i];
-        // }
-        this.things.splice(this);
+      funzioneElimina: function (index) {
+        this.things.splice(index, 1);
       }
     }
 
