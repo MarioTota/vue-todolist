@@ -12,8 +12,12 @@ var app = new Vue({
 
     methods: {
       funzioneAggiungi: function () {
+        if(this.message == "") {
+          window.alert("Devi compilare tutti i campi");
+        } else {
         this.things.push(this.message);
         this.message = "";
+        }
       },
       funzioneElimina: function () {
         // for (var i = 0; i < this.things.length; i++) {
