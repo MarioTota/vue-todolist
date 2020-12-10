@@ -21,7 +21,7 @@ var app = new Vue({
       },
       funzioneElimina: function (index) {
         this.things.splice(index, 1);
-      }
+      },
     }
 
 

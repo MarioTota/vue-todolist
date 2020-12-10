@@ -9,15 +9,15 @@
 </head>
 <body>
 
-  <div id="root">
+  <div id="root" v-on:keyup.enter="funzioneAggiungi">
     <div class="things">
       <div v-for="thing, index in things" class="">
-        {{ thing }} {{ index }}
+        {{ thing }}
         <span @click="funzioneElimina(index)">X</span>
       </div>
     </div>
     <input type="text" name="" value="" v-model="message">
-    <button @click="funzioneAggiungi" type="button" name="button">aggiungi</button>
+    <button @click="funzioneAggiungi">aggiungi</button>
   </div>
 
   <script src="script.js" charset="utf-8"></script>
