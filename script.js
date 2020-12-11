@@ -3,10 +3,10 @@ var app = new Vue({
     data: {
       message: "",
       things: [
-        "comprare il pane",
-        "portare giu il cane",
-        "annaffiare le piante",
-        "lavare la macchina"
+        "Comprare il pane",
+        "Portare giu il cane",
+        "Annaffiare le piante",
+        "Lavare la macchina"
       ]
     },
 
@@ -21,6 +21,11 @@ var app = new Vue({
       },
       funzioneElimina: function (index) {
         this.things.splice(index, 1);
+      },
+      funzioneAggiustaParola: function () {
+        var inputUtente = this.message;
+        inputUtente = inputUtente.toLowerCase();
+        inputUtente = inputUtente[0].toUpperCase() + inputUtente.slice(1);
       },
     }
 
